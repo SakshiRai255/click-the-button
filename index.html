@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click button</title>
+</head>
+<style>
+    body {
+        background-color: rgb(61, 61, 194);
+    }
+
+    .main-div {
+        width: 450px;
+        height: 250px;
+        margin: auto;
+        margin-top: 100px;
+        box-shadow: 0px 10px 40px rgb(0, 0, 0, 0.4);
+        background-color: #fff;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .container-div {
+        width: 450px;
+        margin: auto;
+        padding-top: 50px;
+    }
+
+    #btn {
+        width: 15vw;
+        padding: 15px 20px;
+        border-radius: 10px;
+        color: #fff;
+        background-color: rgb(64, 64, 238);
+        border: none
+    }
+
+    h3 {
+        font: bold;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    #show-increment {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="main-div">
+        <div class="container-div">
+            <button id="btn" onclick="incrementNumber()">Click Me</button>
+            <h3>Your clicked The button <span id="show-increment">0</span> Times</h3>
+
+        </div>
+    </div>
+
+    <script>
+
+        let count = 0;
+        function incrementNumber() {
+            let showIncrement = document.getElementById("show-increment");
+            if (showIncrement.innerText !== "") {
+                count++;
+            }
+            showIncrement.innerHTML = count
+        }
+    </script>
+</body>
+
+</html>
